@@ -150,6 +150,7 @@ p {
     color: white;
     background-color: transparent;
     border: 1px solid white;
+    cursor: pointer;
 }
 
 .form-container button svg {
@@ -211,4 +212,32 @@ p {
     width: 24px;
     height: 24px;
     color: rgba(255, 255, 255, 0.938);
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.custom-checkbox:checked {
+    background-color: white;
+}
+
+.custom-checkbox:checked::after {
+    content: "✔";
+    font-size: 14px;
+    color: rgba(21, 21, 66, 0.603);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
 }
